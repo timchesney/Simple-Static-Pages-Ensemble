@@ -3,7 +3,7 @@
 
 	<xsl:template name="page-title">
 		<xsl:choose>
-			<xsl:when test="$page-name != ''">
+			<xsl:when test="$current-path != '/'">
 				<xsl:value-of select="data/settings/entry/site-name"/>
 	<xsl:text> &#8212; </xsl:text>
 				<xsl:value-of select="data/pages/entry[title/@handle=$page-name]/title"/>
